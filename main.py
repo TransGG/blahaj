@@ -5,6 +5,9 @@ import os
 import random
 import asyncio
 import json
+import dotenv
+
+dotenv.load_dotenv()
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
