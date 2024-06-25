@@ -13,7 +13,7 @@ intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 commands = discord.app_commands.CommandTree(client)
 
-command_registration_guild = discord.Object(id=os.environ["DISCORD_DEV_GUILD"]) if os.environ["DISCORD_DEV_GUILD"] else None
+command_registration_guild = discord.Object(id=os.environ["DISCORD_DEV_GUILD"]) if "DISCORD_DEV_GUILD" in os.environ and os.environ["DISCORD_DEV_GUILD"] else None
 
 role_to_give = discord.Object(id=os.environ["DISCORD_ROLE_ID"])
 contact_staff_id = os.environ["DISCORD_CONTACT_STAFF_ID"]
